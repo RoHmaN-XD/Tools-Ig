@@ -179,7 +179,7 @@ class FEATURE:
                     continue
         elif self.CHOOSE in ['4', '04']:
             printf(Panel(f"[bold white]Anda telah memilih opsi keluar, terima kasih telah menggunakan program ini. Kami harap program ini membantu Anda!", width=73, style="bold bright_black", title="> [Keluar] <"))
-            os.remove('/sdcard/DCIM/Akun.json')
+            os.remove('KepoBat/Akun.json')
             sys.exit(0)
         else:
             printf(Panel(f"[bold red]Opsi yang Anda masukkan tidak tersedia di Fitur ini, silakan coba opsi lain!", width=73, style="bold bright_black", title="> [Keluar] <"))
