@@ -30,7 +30,7 @@ class LOGIN:
             self.INSTAGRAM = Console().input("[bold bright_black]   ╰─> ")
             if ':' in self.INSTAGRAM:
                 self.USERNAME, self.PASSWORD = (self.INSTAGRAM.split(':')[0], self.INSTAGRAM.split(':')[1])
-                with open('/sdcard/DCIM/Akun.json', 'w+') as W:
+                with open('KepoBat/Akun.json', 'w+') as W:
                     W.write(
                         json.dumps({
                             "Username": f"{self.USERNAME}",
@@ -52,7 +52,7 @@ class FEATURE:
     def __init__(self):
         try:
             TAMPILKAN_LOGO()
-            self.USERNAME, self.PASSWORD = json.loads(open('/sdcard/DCIM/Akun.json', 'r').read())['Username'], json.loads(open('/sdcard/DCIM/Akun.json', 'r').read())['Password']
+            self.USERNAME, self.PASSWORD = json.loads(open('KepoBat/Akun.json', 'r').read())['Username'], json.loads(open('KepoBat/Akun.json', 'r').read())['Password']
             if 'null' in str(self.USERNAME):
                 LOGIN().USERNAME()
             else:
