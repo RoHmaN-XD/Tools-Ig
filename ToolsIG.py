@@ -425,10 +425,10 @@ class SUBMIT:
 
 if __name__ == '__main__':
     try:
-        if os.path.exists("/sdcard/DCIM/Subscribe.json") == False:
+        if os.path.exists("KepoBat/Subscribe.json") == False:
             youtube_url = json.loads(requests.get('https://raw.githubusercontent.com/RoHmaN-XD/Approval-/main/Youtube.json').text)['Link']
             os.system(f'xdg-open {youtube_url}')
-            with open('/sdcard/DCIM/Subscribe.json', 'w') as w:
+            with open('KepoBat/Subscribe.json', 'w') as w:
                 w.write(json.dumps({
                     "Status": True
                 }))
